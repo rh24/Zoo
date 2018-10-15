@@ -4,10 +4,13 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    public class Mammal
+    public abstract class Mammal : Vertebrata
     {
-        public Mammal()
+        protected abstract string Endoskeleton { get; set; }
+
+        public Mammal(string howDeveloped)
         {
+            Endoskeleton = howDeveloped;
         }
     }
 }
