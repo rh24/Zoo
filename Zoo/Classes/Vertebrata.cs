@@ -4,8 +4,11 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    public class Vertebrata
+    public abstract class Vertebrata
     {
+        protected abstract string Endoskeleton;
+        protected abstract string Brain;
+
         public Vertebrata()
         {
         }
