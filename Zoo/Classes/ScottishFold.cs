@@ -6,6 +6,8 @@ namespace Zoo.Classes
 {
     public class ScottishFold : Cat
     {
+        public string Cuteness { get; } = "Overload";
+
         public ScottishFold()
         {
         }
