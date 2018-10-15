@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    public class ScottishFold
+    public class ScottishFold : Cat
     {
         public ScottishFold()
         {
