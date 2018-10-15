@@ -6,9 +6,10 @@ namespace Zoo.Classes
 {
     public abstract class Cat : Mammal
     {
-        protected abstract bool Limber { get; set; }
-        protected virtual bool MarvelousHearing { get; set; }
-        protected virtual string Ears { get; set; }
+        public virtual bool Limber { get; } = true;
+        public virtual bool MarvelousHearing { get; set; } = true;
+        public virtual string Ears { get; set; } = "Straight ears";
+        public abstract string Energy { get; set; }
 
         protected virtual string Sleeps()
         {

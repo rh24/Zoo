@@ -1,4 +1,5 @@
 ﻿using System;
+using Zoo.Classes;
 
 namespace Zoo
 {
@@ -6,7 +7,8 @@ namespace Zoo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ScottishFold waffles = new ScottishFold();
+            Console.WriteLine($"Traits of this {waffles.GetType()}:" + Environment.NewLine + $"{waffles.Cuteness}");
         }
     }
 }

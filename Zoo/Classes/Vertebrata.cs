@@ -6,11 +6,12 @@ namespace Zoo.Classes
 {
     public abstract class Vertebrata
     {
-        protected abstract string Endoskeleton;
-        protected abstract string Brain;
+        public abstract string Endoskeleton { get; set; }
+        public abstract string Brain { get; set; }
 
         public Vertebrata()
         {
+
         }
     }
 }

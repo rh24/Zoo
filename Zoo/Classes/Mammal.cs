@@ -6,11 +6,11 @@ namespace Zoo.Classes
 {
     public abstract class Mammal : Vertebrata
     {
-        protected abstract string Endoskeleton { get; set; }
+        public override string Endoskeleton { get; set; } = "Has a backbone";
+        public override string Brain { get; set; } = "Well-developed brain";
 
-        public Mammal(string howDeveloped)
+        public Mammal()
         {
-            Endoskeleton = howDeveloped;
         }
     }
 }
