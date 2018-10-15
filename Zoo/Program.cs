@@ -9,6 +9,7 @@ namespace Zoo
         {
             ScottishFold waffles = new ScottishFold();
             Console.WriteLine($"Traits of this {waffles.GetType()}:" + Environment.NewLine + $"{waffles.Cuteness}");
+            Console.WriteLine(waffles.Moves());
         }
     }
 }

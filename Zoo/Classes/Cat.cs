@@ -11,19 +11,19 @@ namespace Zoo.Classes
         public virtual string Ears { get; set; } = "Straight ears";
         public abstract string Energy { get; set; }
 
-        protected virtual string Sleeps()
+        public virtual string Sleeps()
         {
             return "Cats usually sleep during the day. They are nocturnal.";
         }
 
-        protected virtual string Plays()
+        public virtual string Plays()
         {
             return "Likes to play in boxes.";
         }
 
-        protected virtual string Moves()
+        public virtual string Moves()
         {
-            return "They are graceful animals. They move like ballerinas.";
+            return "Normally, cats are graceful animals. They move like ballerinas.";
         }
 
         public Cat()
