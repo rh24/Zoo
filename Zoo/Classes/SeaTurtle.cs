@@ -11,7 +11,7 @@ namespace Zoo.Classes
         // test for inheritance of the Slow property from Turtle
         public string Moves()
         {
-            return $"Turtles are known to be {base.MovingSpeed}, but sea turtles swim fast.";
+            return $"Although they're {base.MovingSpeed.ToLower()} on land, sea turtles swim fast.";
         }
 
         public override string LikesCats()

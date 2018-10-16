@@ -54,12 +54,12 @@ namespace ZooTests
         ScottishFold waffles = new ScottishFold("Waffles");
 
         /// <summary>
-        /// Test that ScottishFold inherits "Playful" from base class Cat when checking its GetDemeanor() method.
+        /// Test that ScottishFold inherits "Playful" from base class Cat when checking its GetDemeanor() method. Since I override the return string to have a lower cased version of the base string, I similary lower case the base string in the test.
         /// </summary>
         [Fact]
         public void CheckScottishFoldInheritsPlayful()
         {
-            string playful = mainie.GetDemeanor();
+            string playful = mainie.GetDemeanor().ToLower();
             bool isContained = waffles.GetDemeanor().Contains(playful);
             Assert.True(isContained);
         }
@@ -73,6 +73,55 @@ namespace ZooTests
             string baseString = mainie.Moves();
             bool isContained = waffles.Moves().Contains(baseString);
             Assert.True(isContained);
+        }
+
+        SeaTurtle wen = new SeaTurtle("Wen");
+
+        /// <summary>
+        /// Test that a SeaTurtle object inherits its MovingSpeed property from Turtle base class.
+        /// </summary>
+        [Fact]
+        public void SeaTurtleInheritsMovingSpeedFromTurtle()
+        {
+            string movingSpeed = "Slow";
+            string checkAgainst = wen.MovingSpeed;
+            Assert.Equal(movingSpeed, checkAgainst);
+        }
+
+        /// <summary>
+        /// Test that SeaTurtle object inherits the property Endoskeleton that was overriden in Reptile class, which is two layers of inheritance above the SeaTurtle class.
+        /// </summary>
+        [Fact]
+        public void SeaTurtleInheritsUnalteredEndoskeleton()
+        {
+            string hasABackbone = "Has a backbone";
+            string checkAgainst = wen.Endoskeleton;
+            Assert.Equal(hasABackbone, checkAgainst);
+        }
+
+        Rat rat = new Rat("Rat");
+
+        /// <summary>
+        /// Test whether concrete Rat object inherits 
+        /// </summary>
+        [Fact]
+        public void CheckVertebrateGrettingInherited()
+        {
+            string vertebrateGreeting = "I have a spine!";
+            string checkAgainst = rat.VertebrateGretting();
+            Assert.Equal(vertebrateGreeting, checkAgainst);
+        }
+
+        /// <summary>
+        /// Test whether instances of the Rat concrete class have a suspected AvgLifeSpanInYears property == 1. This is because I get the property value based on the inherited base.AvgLifeSpanInYears - 4, which should gives me int 1.
+        /// </summary>
+        [Fact]
+        public void CheckAvgLifeSpanOfMouse()
+        {
+            int lifeSpan = rat.AvgLifeSpanInYears;
+            int expected = 1;
+            Assert.IsType<int>(lifeSpan);
+            Assert.Equal(expected, lifeSpan);
         }
     }
 }

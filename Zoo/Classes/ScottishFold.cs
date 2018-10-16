@@ -30,7 +30,7 @@ namespace Zoo.Classes
         // test to prove inheritance => "Lazy, affectionate, and, sometimes, playful."
         public override string GetDemeanor()
         {
-            return $"Lazy, affectionate, and, sometimes, {base.GetDemeanor()}.";
+            return $"Lazy, affectionate, and, sometimes, {base.GetDemeanor().ToLower()}.";
         }
     }
 }
