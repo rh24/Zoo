@@ -144,5 +144,17 @@ namespace ZooTests
             Assert.IsType<int>(lifeSpan);
             Assert.Equal(expected, lifeSpan);
         }
+
+        /// <summary>
+        /// This method tests for polymorphism. One key aspect of polymorphism is that base classes may define virtual methods that may be overriden by the derivative class. A SeaTurtle object's GetSkinType() returns a different value from Reptile's GetSkinType(). The SeaTurtle class does not override the GetSkinType() method from its base Turtle class. It simply inherits it. So, this test actually proves that the Turtle class has overriden GetSkinType().
+        /// </summary>
+        [Fact]
+        public void TurtleOverridesGetSkinTypeMethodFromReptileBaseClass()
+        {
+            string reptileGetSkinType = "Has scales";
+            string seaTurtleGetSkinType = wen.GetSkinType();
+
+            Assert.NotEqual(reptileGetSkinType, seaTurtleGetSkinType);
+        }
     }
 }
