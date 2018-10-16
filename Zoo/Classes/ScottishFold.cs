@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Zoo.Interfaces;
 
 namespace Zoo.Classes
 {
-    public class ScottishFold : Cat
+    public class ScottishFold : Cat, IApproachable
     {
         public override string Cuteness { get; set; } = "Overload";
         public override bool Limber { get => false; }
