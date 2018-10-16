@@ -8,10 +8,10 @@ namespace Zoo.Classes
     {
         public virtual bool Limber { get; } = true;
         public virtual bool MarvelousHearing { get; set; } = true;
-        public abstract string Name;
+        public abstract string Name { get; set; }
         public virtual string Ears { get; set; } = "Straight";
-        public override int AvgLifeSpanInYears = 15;
-        public abstract string Cuteness;
+        public override int AvgLifeSpanInYears { get; set; } = 15;
+        public abstract string Cuteness { get; set; }
 
         public override string MakeSound()
         {
