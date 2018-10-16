@@ -8,6 +8,7 @@ namespace Zoo.Classes
     {
         public virtual bool Limber { get; } = true;
         public virtual bool MarvelousHearing { get; set; } = true;
+        public abstract string Name;
         public virtual string Ears { get; set; } = "Straight";
         public override int AvgLifeSpanInYears = 15;
         public abstract string Cuteness;
@@ -37,8 +38,9 @@ namespace Zoo.Classes
             return "Normally, cats are graceful animals. They move like ballerinas.";
         }
 
-        public Cat()
+        public Cat(string name)
         {
+            Name = name;
         }
     }
 }

@@ -6,8 +6,13 @@ namespace Zoo.Classes
 {
     public class MaineCoon
     {
-        public MaineCoon()
+        public string Name { get; set; }
+        public override int AvgLifeSpanInYears = 12;
+        public override string Cuteness = "Pretty Cute";
+
+        public MaineCoon(string name) : base(name)
         {
+            Name = name;
         }
     }
 }

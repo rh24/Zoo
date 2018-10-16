@@ -11,8 +11,9 @@ namespace Zoo.Classes
         public string Name { get; set; }
         public override string Ears { get => "Folded ears"; }
 
-        public ScottishFold()
+        public ScottishFold(string name) : base(name)
         {
+            Name = name;
         }
 
         public override string Sleeps()
