@@ -48,7 +48,13 @@ namespace Zoo.Classes
         // Method from pt.2 IEatable implementation
         public string ShouldWeEatThis()
         {
-            return "No";
+            if (Diseased) return "I don't think you want to do that... this animal is diseased.";
+            if (FattyMeat && DeliciousRating >= 4) return "We hear good things about it! It's worth trying!";
+            if (DeliciousRating <= 3 && !FattyMeat) return "It tastes about average at best, and it's not fatty meat... It's up to you, but we wouldn't recommend it.";
+            if (DeliciousRating <= 2) return "It tastes terrible.";
+            if (DeliciousRating >= 4) return "It tastes good!";
+
+            return "We don't have any opinons on this animal.";
         }
     }
 }
