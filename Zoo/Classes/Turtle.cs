@@ -4,10 +4,15 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    public class Turtle
+    public abstract class Turtle : Reptile
     {
-        public Turtle()
+        public override string MovingSpeed { get; set; } = "Slow";
+
+        public override string GetSkinType()
         {
+            return $"{Skin} that has hardened.";
         }
+
+        public abstract string LikesCats();
     }
 }
