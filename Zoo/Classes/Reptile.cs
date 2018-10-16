@@ -20,9 +20,9 @@ namespace Zoo.Classes
 
         // Properties from pt.2 IApproachable implementation
         public bool ReceivedShots { get; set; } = true;
-        public bool WillBite { get; set; } = true;
+        public virtual bool WillBite { get; set; } = true;
         public bool MightCharge { get; set; } = false;
-        public bool LikesAttention { get; set; } = false;
+        public virtual bool LikesAttention { get; set; } = false;
 
         // Methods from pt.1 of lab
         public string BloodTemperature()

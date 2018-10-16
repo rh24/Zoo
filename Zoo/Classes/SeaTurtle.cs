@@ -7,8 +7,9 @@ namespace Zoo.Classes
     public class SeaTurtle : Turtle
     {
         public string Name { get; set; }
+        public override bool LikesAttention { get; set; } = true;
+        public override bool WillBite { get; set; } = false;
 
-        // test for inheritance of the Slow property from Turtle
         public string Moves()
         {
             return $"Although they're {base.MovingSpeed.ToLower()} on land, sea turtles swim fast.";
