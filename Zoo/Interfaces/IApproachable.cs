@@ -11,6 +11,6 @@ namespace Zoo.Interfaces
         bool MightCharge { get; set; }
         bool LikesAttention { get; set; }
 
-        string Approach();
+        string ShouldTouristApproach();
     }
 }
