@@ -11,6 +11,7 @@ namespace ZooTests
         Sphynx sphynx = new Sphynx("Cleopatra");
         Mouse mouse = new Mouse("Minnie");
 
+        // Also need a bunch of .IsType<Class> tests
 
         /// <summary>
         /// Test that that SoftShellTurtle inherits overriden abstract properties Endoskeleton, Brain from Vertebrata class. The first point of override was in the Reptile class.
