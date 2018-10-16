@@ -9,7 +9,7 @@ namespace Zoo.Classes
         public string Name { get; set; }
         // test for inheritance => 1
         // test for overriding: shouldn't be able to set AvgLifeSpanInYears of new Rat object
-        public override int AvgLifeSpanInYears { get => base.AvgLifeSpanInYears; }
+        public override int AvgLifeSpanInYears { get => base.AvgLifeSpanInYears - 4; }
         protected override string Size { get; set; } = "football";
 
         // test for inheritance => "Size of a football"
