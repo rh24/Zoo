@@ -146,7 +146,7 @@ namespace ZooTests
         }
 
         /// <summary>
-        /// This method tests for polymorphism. One key aspect of polymorphism is that base classes may define virtual methods that may be overriden by the derivative class. A SeaTurtle object's GetSkinType() returns a different value from Reptile's GetSkinType(). The SeaTurtle class does not override the GetSkinType() method from its base Turtle class. It simply inherits it. So, this test actually proves that the Turtle class has overriden GetSkinType().
+        /// This method tests for polymorphism. One key aspect of polymorphism is that base classes may define virtual methods that may be overriden by the derivative class. A SeaTurtle object's GetSkinType() returns a different value from Reptile's GetSkinType(). The SeaTurtle class does not override the GetSkinType() method from its base Turtle class. It simply inherits it. So, this test actually proves that the Turtle class has overriden GetSkinType(). I can't instantiate a new Reptile since it's an abstract class, so I hardcode the test value to check against.
         /// </summary>
         [Fact]
         public void TurtleOverridesGetSkinTypeMethodFromReptileBaseClass()
