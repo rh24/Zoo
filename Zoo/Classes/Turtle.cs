@@ -6,7 +6,7 @@ namespace Zoo.Classes
 {
     public abstract class Turtle : Reptile
     {
-        public override string MovingSpeed { get; set; } = "Slow";
+        public override string MovingSpeed { get; set; } = "slow";
 
         public override string GetSkinType()
         {
