@@ -9,8 +9,10 @@ Polymorphism is the concept of derivative class members changing shape according
 * Mammal overrides the abstract Endoskeleton and Brain properties from abstract class Vertebrata.
 
 Encapsulation is the idea of enclosing everything into a black box, in which outsiders do not know what goes on inside there, but they know how to use the box.
+* Within the Cat class, there is a method called ShouldTouristApproach. We don't know how the outputted string is being determined, we only know that a message is printed out and that we can call this method.
 
 Abstraction is the concept of turning complex concrete entities into idealogical representations of what they are and what they can do. Asbstraction hides away the details necessary to execute actions.
+* I've made an abstraction of a Cat into a Cat class. It's a representation of a Cat with properties and behaviors that a real world cat might have. Two of these behaviors are Sleeps() and Plays().
 
 Several classes implement up to two different interfaces. Interfaces allow developers to interact with classes for what they do and not how they do it. In other words, an interface dictates that developers implement specific members within the classes that will use the given interface. Classes can implement more than one interface. 
   
