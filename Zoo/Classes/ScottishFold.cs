@@ -30,7 +30,6 @@ namespace Zoo.Classes
         {
             Name = name;
         }
-
         public override string Sleeps() => "But this cat sleeps at night with its hooman.";
 
         public override string Moves() => $"{base.Moves()} However, this cat has a hereditary cartilage disease that makes moving painful.";
@@ -40,7 +39,10 @@ namespace Zoo.Classes
         // Method from pt.2 IApproachable implementation
         public string ShouldTouristApproach()
         {
-            return "Yes";
+            if (WillBite || MightCharge) return "Definitely do not go anywhere near this animal. It might bite you and/or charge.";
+            if (ReceivedShots && LikesAttention) return "Go ahead and shower this cutie with attention! It's vaccinated and loves hoomans!";
+
+            return "We don't know enough about this animal to recommend you go near it. Err on the safe side.";
         }
 
         // Method from pt.2 IEatable implementation
