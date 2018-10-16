@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    public class Rodent : Mammal
+    public abstract class Rodent : Mammal
     {
         public override int AvgLifeSpanInYears { get; set; } = 5;
+        protected virtual string Size { get; set; } = "tennis ball";
 
         public override string MakeSound()
         {
@@ -15,7 +16,7 @@ namespace Zoo.Classes
 
         public virtual string GrowsUntil()
         {
-            return "Size of a tennis ball";
+            return $"Size of a {Size}";
         }
     }
 }
