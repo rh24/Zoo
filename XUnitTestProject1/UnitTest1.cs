@@ -12,6 +12,10 @@ namespace ZooTests
         SoftShellTurtle softie = new SoftShellTurtle("Softie");
         Sphynx sphynx = new Sphynx("Cleopatra");
         Mouse mouse = new Mouse("Minnie");
+        MaineCoon mainie = new MaineCoon("Mainie");
+        ScottishFold waffles = new ScottishFold("Waffles");
+        SeaTurtle wen = new SeaTurtle("Wen");
+        Rat rat = new Rat("Rat");
 
         // Also need a bunch of .IsType<Class> tests
         // Test for implementation
@@ -32,6 +36,9 @@ namespace ZooTests
             }
         }
 
+        /// <summary>
+        /// Tests whether or not Reptile class implements IEdible and IApproachable if derivative classes have inherited the implementation.
+        /// </summary>
         [Fact]
         public void ReptilesImplementIEdible()
         {
@@ -43,16 +50,28 @@ namespace ZooTests
                 Assert.IsType<bool>(reptiles[i].Diseased);
                 Assert.IsType<bool>(reptiles[i].FattyMeat);
                 Assert.IsType<string>(reptiles[i].ShouldWeEatThis());
+                Assert.IsAssignableFrom<IEdible>(reptiles[i]);
+                Assert.IsAssignableFrom<IApproachable>(reptiles[i]);
             }
         }
 
         /// <summary>
-        /// This method tests that all concrete object exhibit interface inheritance.
+        /// Test whether Cat class implements the two interfaces and that derivative concrete objects inherit the implementation. 
         /// </summary>
         [Fact]
-        public void AllConcreteClassesExhibitInterfaceInheritance()
+        public void CatsImplementInterfaces()
         {
-            Assert.IsAssignableFrom<IEdible>(softie);
+            Cat[] cats = { mainie, waffles, sphynx };
+
+            for (int i = 0; i < cats.Length; i++)
+            {
+                Assert.IsType<bool>(cats[i].LikesAttention);
+                Assert.IsType<bool>(cats[i].ReceivedShots);
+                Assert.IsType<string>(cats[i].ShouldTouristApproach());
+                Assert.IsType<bool>(cats[i].WillBite);
+                Assert.IsAssignableFrom<IEdible>(cats[i]);
+                Assert.IsAssignableFrom<IApproachable>(cats[i]);
+            }
         }
 
         /// <summary>
@@ -89,8 +108,6 @@ namespace ZooTests
             Assert.IsType<string>(checkAgainstMouseEndo);
         }
 
-        MaineCoon mainie = new MaineCoon("Mainie");
-
         /// <summary>
         /// MaineCoon inherits its GetDemeanor method from base Cat class. GetDemeanor() => "Playful"
         /// </summary>
@@ -112,8 +129,6 @@ namespace ZooTests
             string checkAgainst = mainie.MakeSound();
             Assert.Equal(expected, checkAgainst);
         }
-
-        ScottishFold waffles = new ScottishFold("Waffles");
 
         /// <summary>
         /// Test that ScottishFold overrides "Playful" from base class Cat when checking its GetDemeanor() method. Since I override the returned string from the base.GetDemeanor() method, I have to to lower case it to fit into my overriden string. Similary, I lower case the base string in the test to fit my expected outcome.
@@ -139,8 +154,6 @@ namespace ZooTests
             Assert.NotEqual(baseString, newString);
         }
 
-        SeaTurtle wen = new SeaTurtle("Wen");
-
         /// <summary>
         /// Test that a SeaTurtle object inherits its MovingSpeed property from Turtle base class.
         /// </summary>
@@ -162,8 +175,6 @@ namespace ZooTests
             string checkAgainst = wen.Endoskeleton;
             Assert.Equal(hasABackbone, checkAgainst);
         }
-
-        Rat rat = new Rat("Rat");
 
         /// <summary>
         /// Test whether concrete Rat object inherits Vertebrata's VertebrateGretting method.
