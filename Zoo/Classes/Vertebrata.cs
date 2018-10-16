@@ -9,9 +9,9 @@ namespace Zoo.Classes
         public abstract string Endoskeleton { get; set; }
         public abstract string Brain { get; set; }
 
-        public Vertebrata()
+        public string VertebrateGretting()
         {
-
+            return "I have a spine!";
         }
     }
 }
