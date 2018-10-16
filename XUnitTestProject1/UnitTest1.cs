@@ -17,8 +17,20 @@ namespace ZooTests
         SeaTurtle wen = new SeaTurtle("Wen");
         Rat rat = new Rat("Rat");
 
-        // Also need a bunch of .IsType<Class> tests
-        // Test for implementation
+        /// <summary>
+        /// Test that mammals are vertebrates.
+        /// </summary>
+        [Fact]
+        public void ProveConcreteMammalsAreVertebrata()
+        {
+            Mammal[] mammalObjs = { sphynx, mouse, mainie, waffles, rat };
+
+            for (int i = 0; i < mammalObjs.Length; i++)
+            {
+                Assert.IsAssignableFrom<Vertebrata>(mammalObjs[i]);
+            }
+        }
+
         /// <summary>
         /// All of my concrete classes exhibit interface inheritance because I have implemented both the IEatable and IApproachable interfaces in a base class two levels up from each concrete class: Mammal and Reptile. This method tests for whether a SoftShellTurtle object has inherited the implementation of IEatable properties and methods from the Turtle : Reptile class.
         /// </summary>
