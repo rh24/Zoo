@@ -2,7 +2,15 @@
 
 This is a .NET Core Console application that serves to mimic a zoo. When the user fires up the application, seven different types of concrete animals will display their traits in the terminal. This project serves as a way to practice Object Oriented Programming principles, namely, Inheritance, Polymorphism, Encapsulation, and Abstraction.
 
-Inheritance means that classes can have access to the members of the base class from which it inherits. This extends to methods, properties, events, and fields, etc. as long as their access modifier is not private. Polymorphism is the concept of derivative class members changing shape according to the class's needs. Encapsulation is the idea of enclosing everything into a black box, in which outsiders do not know what goes on inside there, but they know how to use the box. Abstraction is the concept of turning complex concrete entities into idealogical representations of what they are and what they can do. Asbstraction hides away the details necessary to execute actions.
+Inheritance means that classes can have access to the members of the base class from which it inherits. This extends to methods, properties, events, and fields, etc. as long as their access modifier is not private.
+* Mammal inherits from Vertebrata.
+
+Polymorphism is the concept of derivative class members changing shape according to the class's needs.
+* Mammal overrides the abstract Endoskeleton and Brain properties from abstract class Vertebrata.
+
+Encapsulation is the idea of enclosing everything into a black box, in which outsiders do not know what goes on inside there, but they know how to use the box.
+
+Abstraction is the concept of turning complex concrete entities into idealogical representations of what they are and what they can do. Asbstraction hides away the details necessary to execute actions.
 
 Several classes implement up to two different interfaces. Interfaces allow developers to interact with classes for what they do and not how they do it. In other words, an interface dictates that developers implement specific members within the classes that will use the given interface. Classes can implement more than one interface. 
   
