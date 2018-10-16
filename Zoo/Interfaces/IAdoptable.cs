@@ -6,5 +6,7 @@ namespace Zoo.Interfaces
 {
     interface IAdoptable
     {
+        string ReceivedShots { get; set; }
+
     }
 }
