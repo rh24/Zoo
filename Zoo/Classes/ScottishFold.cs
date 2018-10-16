@@ -6,7 +6,7 @@ namespace Zoo.Classes
 {
     public class ScottishFold : Cat
     {
-        public override string Cuteness { get; } = "Overload";
+        public override string Cuteness { get; set; } = "Overload";
         public override bool Limber { get => false; }
         public override string Name { get; set; }
         public override string Ears { get => "Folded ears"; }
@@ -26,9 +26,10 @@ namespace Zoo.Classes
             return $"{base.Moves()} However, this cat has a hereditary cartilage disease that makes moving painful.";
         }
 
-        public override string GetDemeamnor()
+        // test to prove inheritance => "Lazy, affectionate, and, sometimes, playful."
+        public override string GetDemeanor()
         {
-            return "Lazy and affectionate";
+            return $"Lazy, affectionate, and, sometimes, {base.GetDemeanor()}.";
         }
     }
 }
