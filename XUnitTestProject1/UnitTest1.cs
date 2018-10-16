@@ -54,7 +54,7 @@ namespace ZooTests
         ScottishFold waffles = new ScottishFold("Waffles");
 
         /// <summary>
-        /// Test that ScottishFold inherits "Playful" from base class Cat when checking its GetDemeanor() method. Since I override the return string to have a lower cased version of the base string, I similary lower case the base string in the test.
+        /// Test that ScottishFold overrides "Playful" from base class Cat when checking its GetDemeanor() method. Since I override the returned string from the base.GetDemeanor() method, I have to to lower case it to fit into my overriden string. Similary, I lower case the base string in the test to fit my expected outcome.
         /// </summary>
         [Fact]
         public void CheckScottishFoldInheritsPlayful()
@@ -65,14 +65,16 @@ namespace ZooTests
         }
 
         /// <summary>
-        /// Test that ScottishFold inherits part of Moves() from base Cat class. Moves() in a non-overriden derivative object would return "Normally, cats are graceful animals. They move like ballerinas." This method will test whether an object of type Scottish fold contains this string. Even though I've overriden the base behvior in my ScottishFold class, I still use the base.Moves() return value within my newly returned string.
+        /// This method tests that ScotishFold overrides base.Moves(). ScottishFold inherits part of Moves() from base Cat class. Moves() in a non-overriden derivative object would return "Normally, cats are graceful animals. They move like ballerinas." This method will test whether an object of type Scottish fold contains this string. Even though I've overriden the base behvior in my ScottishFold class, I still use the base.Moves() return value within my newly returned string.
         /// </summary>
         [Fact]
         public void CheckScottishFoldMoves()
         {
             string baseString = mainie.Moves();
             bool isContained = waffles.Moves().Contains(baseString);
+            string newString = waffles.Moves();
             Assert.True(isContained);
+            Assert.NotEqual(baseString, newString);
         }
 
         SeaTurtle wen = new SeaTurtle("Wen");
@@ -102,7 +104,7 @@ namespace ZooTests
         Rat rat = new Rat("Rat");
 
         /// <summary>
-        /// Test whether concrete Rat object inherits 
+        /// Test whether concrete Rat object inherits Vertebrata's VertebrateGretting method.
         /// </summary>
         [Fact]
         public void CheckVertebrateGrettingInherited()
@@ -113,7 +115,7 @@ namespace ZooTests
         }
 
         /// <summary>
-        /// Test whether instances of the Rat concrete class have a suspected AvgLifeSpanInYears property == 1. This is because I get the property value based on the inherited base.AvgLifeSpanInYears - 4, which should gives me int 1.
+        /// Test whether instances of the Rat concrete class have a suspected AvgLifeSpanInYears property == 1. This is because I get the property value based on the base.AvgLifeSpanInYears - 4, which should gives me int 1. This also proves polymorphism.
         /// </summary>
         [Fact]
         public void CheckAvgLifeSpanOfMouse()
