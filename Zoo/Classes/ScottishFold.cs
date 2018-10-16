@@ -5,7 +5,7 @@ using Zoo.Interfaces;
 
 namespace Zoo.Classes
 {
-    public class ScottishFold : Cat, IApproachable, IEatable
+    public class ScottishFold : Cat, IApproachable
     {
         // Propeties from pt.1 of OOP Zoo lab
         public override string Cuteness { get; set; } = "Overload";

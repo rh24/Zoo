@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Zoo.Interfaces
 {
-    interface IApproachable
+    public interface IApproachable
     {
         bool ReceivedShots { get; set; }
         bool WillBite { get; set; }

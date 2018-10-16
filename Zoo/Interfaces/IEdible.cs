@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Zoo.Interfaces
 {
-    interface IEatable
+    public interface IEdible
     {
         bool Diseased { get; set; }
         int DeliciousRating { get; set; }

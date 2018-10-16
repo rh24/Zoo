@@ -1,6 +1,8 @@
 using System;
 using Xunit;
 using Zoo.Classes;
+using Zoo.Interfaces;
+using System.Collections.Generic;
 
 namespace ZooTests
 {
@@ -12,6 +14,46 @@ namespace ZooTests
         Mouse mouse = new Mouse("Minnie");
 
         // Also need a bunch of .IsType<Class> tests
+        // Test for implementation
+        /// <summary>
+        /// All of my concrete classes exhibit interface inheritance because I have implemented both the IEatable and IApproachable interfaces in a base class two levels up from each concrete class: Mammal and Reptile. This method tests for whether a SoftShellTurtle object has inherited the implementation of IEatable properties and methods from the Turtle : Reptile class.
+        /// </summary>
+        [Fact]
+        public void MammalsImplementIEdible()
+        {
+            Mammal[] mammalObjs = { sphynx, mouse, mainie, waffles, rat };
+
+            for (int i = 0; i < mammalObjs.Length; i++)
+            {
+                Assert.IsType<int>(mammalObjs[i].DeliciousRating);
+                Assert.IsType<bool>(mammalObjs[i].Diseased);
+                Assert.IsType<bool>(mammalObjs[i].FattyMeat);
+                Assert.IsType<string>(mammalObjs[i].ShouldWeEatThis());
+            }
+        }
+
+        [Fact]
+        public void ReptilesImplementIEdible()
+        {
+            Reptile[] reptiles = { softie, wen };
+
+            for (int i = 0; i < reptiles.Length; i++)
+            {
+                Assert.IsType<int>(reptiles[i].DeliciousRating);
+                Assert.IsType<bool>(reptiles[i].Diseased);
+                Assert.IsType<bool>(reptiles[i].FattyMeat);
+                Assert.IsType<string>(reptiles[i].ShouldWeEatThis());
+            }
+        }
+
+        /// <summary>
+        /// This method tests that all concrete object exhibit interface inheritance.
+        /// </summary>
+        [Fact]
+        public void AllConcreteClassesExhibitInterfaceInheritance()
+        {
+            Assert.IsAssignableFrom<IEdible>(softie);
+        }
 
         /// <summary>
         /// Test that that SoftShellTurtle inherits overriden abstract properties Endoskeleton, Brain from Vertebrata class. The first point of override was in the Reptile class.
