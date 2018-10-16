@@ -10,6 +10,7 @@ namespace Zoo.Classes
         public override bool Limber { get => false; }
         public override string Name { get; set; }
         public override string Ears { get => "Folded ears"; }
+        public override bool MarvelousHearing { get; set; } = false;
 
         public ScottishFold(string name) : base(name)
         {
