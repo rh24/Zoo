@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Zoo.Classes
 {
-    public class Rabbit
+    public class Rat
     {
-        public Rabbit()
+        public Rat()
         {
         }
     }
