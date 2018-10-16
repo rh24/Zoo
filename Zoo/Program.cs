@@ -13,6 +13,8 @@ namespace Zoo
 
             SoftShellTurtle softie = new SoftShellTurtle("Softie");
             Console.WriteLine(softie.MovingSpeed);
+            Console.WriteLine(softie.Endoskeleton);
+            Console.WriteLine(softie.Brain);
             // hopefully, this has been overriden
             // Turtle.MovingSpeed == "slow"
             // softie.MovingSpeed == "Faster than other land turtles"

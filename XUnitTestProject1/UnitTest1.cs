@@ -9,17 +9,46 @@ namespace ZooTests
 
         SoftShellTurtle softie = new SoftShellTurtle("Softie");
 
-        // Test that all concrete classes inherit properties Endoskeleton, Brain
+        /// <summary>
+        /// Test that that SoftShelTurtle overrides inherited abstract properties Endoskeleton, Brain from Vertebrata class.
+        /// </summary>
         [Fact]
         public void InheritsVertebrataProperty1()
         {
-            Assert.IsType<string>(softie.Endoskeleton);
+            string checkAgainst = softie.Endoskeleton;
+            Assert.IsType<string>(checkAgainst);
         }
 
         [Fact]
         public void InheritsVertebrataProperty2()
         {
-            Assert.IsType<string>(softie.Brain);
+            string checkAgainst = softie.Brain;
+            Assert.IsType<string>(checkAgainst);
+        }
+
+
+        MaineCoon mainie = new MaineCoon("Mainie");
+
+        /// <summary>
+        /// MaineCoon inherits its GetDemeanor method from base Cat class. GetDemeanor() => "Playful"
+        /// </summary>
+        [Theory]
+        [InlineData("Playful")]
+        public void CheckMaineCoonDemeanor(string expected)
+        {
+            string checkAgainst = mainie.GetDemeanor();
+            Assert.Equal(expected, checkAgainst);
+        }
+
+        /// <summary>
+        /// This method will test that MaineCoon inherits its MakeSound() => "Meow" from its base Cat class as well.
+        /// </summary>
+        [Theory]
+        [InlineData("Meow")]
+        public void CheckMaineCoonMakeSound(string expected)
+        {
+            string checkAgainst = mainie.MakeSound();
+            Assert.Equal(expected, checkAgainst);
         }
     }
 }
