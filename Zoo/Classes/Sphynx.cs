@@ -6,22 +6,20 @@ namespace Zoo.Classes
 {
     public class Sphynx : Cat
     {
-        public string Name { get; set; }
-        public override int AvgLifeSpanInYears = 12;
+        public override string Name { get; set; }
+        public override int AvgLifeSpanInYears { get; set; } = 11;
+        public override bool HairOnSkin { get; } = false;
+        public override string Cuteness { get; set; } = "Not cute";
+
+        // write test to prove inheritance => "Playful, inquistive, and friendly"
+        public override string GetDemeanor()
+        {
+            return $"{base.GetDemeanor()}, inquisitive, and friendly";
+        }
 
         public Sphynx(string name) : base(name)
         {
             Name = name;
         }
     }
-
-    //    Sphynx
-    //properties:
-    //- string Name { get; set; }
-    //- (override) int AvgLifeSpanInYears = 12;
-    //- (override) bool HairOnSkin = false
-    //- (override) string Cuteness = "Not cute"
-
-    //methods:
-    //- (override) string GetDemeanor => "Inquisitive and friendly"
 }

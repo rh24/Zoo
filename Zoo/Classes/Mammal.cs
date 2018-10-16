@@ -9,7 +9,7 @@ namespace Zoo.Classes
         public override string Endoskeleton { get; set; } = "Has a backbone";
         public override string Brain { get; set; } = "Well-developed brain";
         public virtual int AvgLifeSpanInYears { get; set; }
-        public virtual bool HairOnSkin { get; set; } = true;
+        public virtual bool HairOnSkin { get; } = true;
 
         public string BloodTemperature()
         {
