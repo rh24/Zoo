@@ -8,9 +8,12 @@ namespace ZooTests
     {
 
         SoftShellTurtle softie = new SoftShellTurtle("Softie");
+        Sphynx sphynx = new Sphynx("Cleopatra");
+        Mouse mouse = new Mouse("Minnie");
+
 
         /// <summary>
-        /// Test that that SoftShelTurtle overrides inherited abstract properties Endoskeleton, Brain from Vertebrata class.
+        /// Test that that SoftShellTurtle inherits overriden abstract properties Endoskeleton, Brain from Vertebrata class. The first point of override was in the Reptile class.
         /// </summary>
         [Fact]
         public void InheritsVertebrataProperty1()
@@ -26,6 +29,22 @@ namespace ZooTests
             Assert.IsType<string>(checkAgainst);
         }
 
+        /// <summary>
+        /// This method checks that the Sphynx and Mouse concrete classes inherit the Endoskeleton and Brain properties that were overriden in both the Mammal and Reptile abstract classes.
+        /// </summary>
+        [Fact]
+        public void CheckThatRemainingObjectsInheritOverridenVertebrataProperties()
+        {
+            string checkAgainstSphynxEndo = sphynx.Endoskeleton;
+            string checkAgainstMouseEndo = mouse.Endoskeleton;
+            string checkAgainstSphynxBrain = sphynx.Brain;
+            string checkAgainstMouseBrain = mouse.Brain;
+
+            Assert.IsType<string>(checkAgainstSphynxEndo);
+            Assert.IsType<string>(checkAgainstSphynxBrain);
+            Assert.IsType<string>(checkAgainstMouseBrain);
+            Assert.IsType<string>(checkAgainstMouseEndo);
+        }
 
         MaineCoon mainie = new MaineCoon("Mainie");
 
