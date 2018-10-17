@@ -32,7 +32,7 @@ namespace ZooTests
         }
 
         /// <summary>
-        /// All of my concrete classes exhibit interface inheritance because I have implemented both the IEatable and IApproachable interfaces in a base class two levels up from each concrete class: Mammal and Reptile. This method tests for whether a SoftShellTurtle object has inherited the implementation of IEatable properties and methods from the Turtle : Reptile class.
+        /// All of my concrete classes exhibit interface implentation inheritance because I have implemented both the IEatable and IApproachable interfaces in a base class two levels up from each concrete class: Mammal and Reptile. This method tests for whether a SoftShellTurtle object has inherited the implementation of IEatable properties and methods from the Turtle : Reptile class.
         /// </summary>
         [Fact]
         public void MammalsImplementIEdible()
