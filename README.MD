@@ -26,6 +26,10 @@ The *Reptile* class implements *IApproachable*. This means that it must have the
 
 ![diagram](https://github.com/rh24/Zoo/blob/RebeccaHong-Lab05/assets/CompletedDiagram.png)
 
+## Sample View
+
+![console-output](https://github.com/rh24/Zoo/blob/RebeccaHong-Lab05/assets/zoo_output.png)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/rh24/Zoo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
