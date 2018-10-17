@@ -23,7 +23,7 @@ namespace Zoo
             Console.WriteLine("********************************** WELCOME TO MY CAT$$$$$$$$$$ *************************************");
             foreach (var cat in cats)
             {
-                Console.WriteLine($"Hello, my name is {cat.Name}.");
+                Console.WriteLine($"Hello, my name is {cat.Name}. I'm a {cat.GetType().Name}.");
                 Console.WriteLine($"Endoskelenton: {cat.Endoskeleton}");
                 Console.WriteLine($"Brain: {cat.Brain}");
                 Console.WriteLine($"Avg. Life Span in Years: {cat.AvgLifeSpanInYears}");
@@ -38,15 +38,12 @@ namespace Zoo
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
             }
 
-            // Question:
-            // I can't call mammal.Name because I haven't set a Name property on my mammal class. Is there a way I can change the type of my mammal to be Cat? For example, waffles is technically a ScottishFold : Cat object. Is there a way I can write this:
-            // if (mammal is Cat) Console.WriteLine((Cat)mammal.Name);
-
             var rodents = new List<Rodent> { minnie, rat };
 
             Console.WriteLine("**************************************** Rodents *************************************************");
             foreach (var rodent in rodents)
             {
+                Console.WriteLine($"I'm a {rodent.GetType().Name}.");
                 Console.WriteLine($"Endoskelenton: {rodent.Endoskeleton}");
                 Console.WriteLine($"Brain: {rodent.Brain}");
                 Console.WriteLine($"Avg. Life Span in Years: {rodent.AvgLifeSpanInYears}.");
@@ -64,6 +61,10 @@ namespace Zoo
             Console.WriteLine("**************************************** TURTLE$ *************************************************");
             foreach (var turtle in turtles)
             {
+                // Is there any way I can get the property from this turtle object's derived type SeaTurtle or SoftShellTurtle?
+                // Is there any way I can force it to be a derived type at runtime? {turtle.Name} gives me red squigglies because I never gave implemented a name property in the abstract Turtle class. I only did that in derived classes.
+                // I know there's a way to extract derived types from a collection with LINQ, but that means generating an entirely new collection of the subtype and iterating over that subtype collection. I'm wondering if there's a type casting we can do to extract a derived type from a base type.
+                Console.WriteLine($"I'm a {turtle.GetType().Name}.");
                 Console.WriteLine($"Endoskelenton: {turtle.VertebrateGretting()}");
                 Console.WriteLine($"Brain: {turtle.Brain}");
                 Console.WriteLine($"Moving Speed: {turtle.MovingSpeed}.");
