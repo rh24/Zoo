@@ -75,19 +75,6 @@ namespace Zoo
                 Console.WriteLine($"Fatty Meat: {turtle.FattyMeat}");
                 Console.WriteLine("------------------------------------------------------------------------------------------------------");
             }
-
-
-            //Console.WriteLine($"Traits of this {waffles.GetType()}:" + Environment.NewLine + $"{waffles.Cuteness}");
-            //Console.WriteLine(waffles.Moves());
-            Console.WriteLine(waffles.ShouldTouristApproach());
-            Console.WriteLine(waffles.ShouldWeEatThis());
-
-            //Console.WriteLine(softie.MovingSpeed);
-            //Console.WriteLine(softie.Endoskeleton);
-            //Console.WriteLine(softie.Brain);
-            // hopefully, this has been overriden
-            // Turtle.MovingSpeed == "slow"
-            // softie.MovingSpeed == "Faster than other land turtles"
         }
     }
 }
