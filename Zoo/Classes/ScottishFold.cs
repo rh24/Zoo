@@ -19,7 +19,7 @@ namespace Zoo.Classes
         {
             Name = name;
         }
-        public override string Sleeps() => "But this cat sleeps at night with its hooman.";
+        public override string Sleeps() => $"{base.Sleeps()} But this cat sleeps at night with its hooman.";
 
         public override string Moves() => $"{base.Moves()} However, this cat has a hereditary cartilage disease that makes moving painful.";
 
