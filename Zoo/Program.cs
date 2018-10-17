@@ -17,7 +17,7 @@ namespace Zoo
             SoftShellTurtle softie = new SoftShellTurtle("Softie");
             SeaTurtle wen = new SeaTurtle("Wen");
 
-            // Display properties and behaviors. Categorize them in two main loops. Concrete animals inheriting from the Cat class, Turtle class, and Rodent Class.
+            // Display properties and behaviors of all objects. Categorize them in two main loops. Concrete animals inheriting from the Cat class, Turtle class, and Rodent Class.
             var cats = new List<Cat> { waffles, cleo, simba };
 
             Console.WriteLine("********************************** WELCOME TO MY CAT$$$$$$$$$$ *************************************");
