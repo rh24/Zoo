@@ -24,7 +24,7 @@ namespace Zoo
             foreach (var cat in cats)
             {
                 Console.WriteLine($"Hello, my name is {cat.Name}. I'm a {cat.GetType().Name}.");
-                Console.WriteLine($"Endoskelenton: {cat.Endoskeleton}");
+                Console.WriteLine($"Endoskeleton: {cat.Endoskeleton}");
                 Console.WriteLine($"Brain: {cat.Brain}");
                 Console.WriteLine($"Avg. Life Span in Years: {cat.AvgLifeSpanInYears}");
                 Console.WriteLine($"Ear type: {cat.Ears}");
